@@ -1,0 +1,31 @@
+<div class="container" style="margin-top: 1%;">
+  <form class="form-inline">
+    <!-- Content here -->
+    <select class="form-control form-control-lg" name="depart"  style="width:25%" (change)="sortVoyagesDepart($event)">
+      <OPTION  selected>Départ
+      <OPTION value="Tunis">Tunis
+      <OPTION value="Kram">Kram
+      <option value="Nabeul">Nabeul
+      <OPTION value="Takelsa">Takelsa
+      <OPTION value="Ghazela">Ghazela
+    </select>
+    <select class="form-control form-control-lg" style="width:25%;margin-left: 4%;" (change)="sortVoyageArrive($event)" >
+      <option selected>Destination</option>
+      <OPTION value="Tunis">Tunis
+      <OPTION value="Kram">Kram
+      <option value="Nabeul">Nabeul
+      <OPTION value="Takelsa">Takelsa
+      <OPTION value="Ghazela">Ghazela
+    </select>
+    <input class="form-control form-control-lg" type="date" value="2011-08-19" id="example-date-input" style="margin-left: 4%;" (change)="sortVoyagesDate($event)" >
+  </form>
+</div>
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <app-voyage-list [selectedDepart]="selectedDepart"
+                        [selectedArrive]="selectedArrive"
+                        [selectedDate]="selectedDate" ></app-voyage-list>
+    </div>
+  </div>
+</div>

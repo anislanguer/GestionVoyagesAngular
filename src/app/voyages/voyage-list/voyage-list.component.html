@@ -1,0 +1,3 @@
+<app-voyages-item class="col-md-4"
+                  *ngFor="let v of voyagesFiltre" [voyage]="v"
+                  (idVoyage)="spliceVoyage($event)"></app-voyages-item>
